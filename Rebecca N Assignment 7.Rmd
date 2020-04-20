@@ -33,7 +33,14 @@ attributes(BBD)
 regression_residual <- mod(BBD$weight,BBD$minute, 10)
 ```
 
-
+#### This is the plot for the function with the applied data
+```{r}
+{
+  scatter <- plot(BBD$weight,BBD$minute)
+  model <- lm(BBD$minute ~ BBD$weight)
+  abline(model)
+}
+```
 
 
 
