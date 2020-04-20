@@ -1,0 +1,23 @@
+---
+title: "Rebecca N Assignment 7"
+output: html_notebook
+author: "Rebecca Neal"
+date: "20 April 2020"
+version: "2.0 - Cleaning up GitKraken"
+---
+This notebook is for EDRM 718 Assignment #7 linking R, GitHub, and GitKraken.
+This is writing a function.
+
+This is a function to make a linear equation 
+```{r}
+mod <- function(x,y,p){
+  model <- lm(x~y)
+  summary(model)
+  attributes(model)
+  Residuals <- ((resid(model)^2)^(1/2))
+  Sort_Residuals <- sort(Residuals,decreasing = TRUE)
+  cutoff <- Sort_Residuals[p]
+  logical_residual <- (Residuals >= cutoff)
+  return(logical_residual)
+```
+
