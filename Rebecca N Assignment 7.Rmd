@@ -19,5 +19,12 @@ mod <- function(x,y,p){
   cutoff <- Sort_Residuals[p]
   logical_residual <- (Residuals >= cutoff)
   return(logical_residual)
+}
+```
+
+### Load in the data
+```{r}
+BBD <- read.csv("Baby Boom Data.csv")
+attributes(BBD)
 ```
 
