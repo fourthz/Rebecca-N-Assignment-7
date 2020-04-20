@@ -28,3 +28,14 @@ BBD <- read.csv("Baby Boom Data.csv")
 attributes(BBD)
 ```
 
+#### This is applying the function to the data set
+```{r}
+regression_residual <- mod(BBD$weight,BBD$minute, 10)
+```
+
+
+
+
+
+
+
